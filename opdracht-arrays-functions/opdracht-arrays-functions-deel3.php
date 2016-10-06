@@ -1,12 +1,12 @@
-<?php
-    
-    $voornaam = "Kevin";
-    $naam = "Buys";
+<?php 
 
-    /*
-    $naam = "Buys";
-    $email = "kevin.buys@student.kdg.be"
-    */
+	$nummers = [8, 7, 8, 7, 3, 2, 1, 2, 4];
+
+    $nummers = array_unique($nummers);
+
+    rsort($nummers);
+
+
 ?>
 
 <!doctype html>
@@ -14,7 +14,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Opdracht comments</title>
+        <title>Opdracht array functies</title> 
         <link rel="stylesheet" href="http://web-backend.local/css/global.css">
         <link rel="stylesheet" href="http://web-backend.local/css/facade.css">
         <link rel="stylesheet" href="http://web-backend.local/css/directory.css">
@@ -22,16 +22,14 @@
     <body class="web-backend-opdracht">
         
         <section class="body">
-        
-			<h1>Opdracht comments: deel 1</h1>
+            
+            <h1>Opdracht array functies: deel 1</h1>
 
-			<ul>
+            <ul>
+                <li><code><?= print_r($nummers) ?></code></li>
+            </ul>
 
-                <li><?= $voornaam . " " .  $naam ?></li>
-
-			</ul>
-			
-		</section>
+        </section>
 
     </body>
 </html>
