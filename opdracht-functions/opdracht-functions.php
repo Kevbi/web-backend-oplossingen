@@ -9,7 +9,7 @@
 	}
 
 	function isEven($getal) {
-		($getal%2 == 0) ? "true" : "false";
+		return ($getal%2 == 0) ? "true" : "false";
 	}
 
 ?>
@@ -28,7 +28,7 @@
         <section class="body">
         
             <h1>Opdracht functies: deel 1</h1>
-            <p><?= isEven(8); ?></p>
+            <p><?= isEven((vermenigvuldig(5,3))); ?></p>
 
         </section>
 
