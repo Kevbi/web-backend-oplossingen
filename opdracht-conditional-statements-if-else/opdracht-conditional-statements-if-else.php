@@ -11,7 +11,7 @@
         $schrikkeljaar = $jaartal . "is geen schrikkeljaar";
     }
 
-    $seconden = 666666663;
+    $seconden = 3153700;
     $minuten = 0;
     $uren = 0;
     $dagen = 0;
@@ -100,8 +100,8 @@
                             <li>uren: <?= floor($uren) ?></li>
                             <li>dagen: <?= floor($dagen) ?></li>
                             <li>weken: <?= floor($weken) ?></li>
-                            <li>maanden (31): <?= floor($maanden) ?></li>
-                            <li>jaren (365): <?= floor($jaren) ?></li>
+                            <li>maanden: <?= floor($maanden) ?></li>
+                            <li>jaren: <?= floor($jaren) ?></li>
                         </ul></strong>
                     </div>
 
