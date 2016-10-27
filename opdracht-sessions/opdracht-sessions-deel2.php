@@ -1,27 +1,24 @@
 <?php
 
-    session_start();
+ session_start();
 
-      if (isset($_POST["email"])) {
+    var_dump($_SESSION);
+
+    if (isset($_POST["submit"])) {
+
         $_SESSION["email"] = $_POST["email"];
-    }
-     if (isset($_POST["nick"])) {
         $_SESSION["nick"] = $_POST["nick"];
-    }
-      if (isset($_POST["street"])) {
-        $_SESSION["street"] = $_POST["street"];
-    }
-      if (isset($_POST["number"])) {
-        $_SESSION["number"] = $_POST["number"];
-    }
-      if (isset($_POST["gemeente"])) {
-        $_SESSION["gemeente"] = $_POST["gemeente"];
-    }
-      if (isset($_POST["postcode"])) {
-        $_SESSION["postcode"] = $_POST["postcode"];
+
     }
 
+    $email = (isset($_SESSION["email"])) ? $_SESSION["email"] : '';
+    $nickname = (isset($_SESSION["nick"])) ? $_SESSION["nick"] : '';
+    $street = (isset($_SESSION["street"])) ? $_SESSION["street"] : '';
+    $number = (isset($_SESSION["number"])) ? $_SESSION["number"] : '';
+    $gemeente = (isset($_SESSION["gemeente"])) ? $_SESSION["gemeente"] : '';
+    $postcode = (isset($_SESSION["postcode"])) ? $_SESSION["postcode"] : '';
 
+?>
 ?>
 <!doctype html>
 <html>
@@ -35,30 +32,28 @@
     <body class="web-backend-opdracht"> 
         <br/>
         <h2>registratiegegevens</h2>
-        <p>email:<?php echo $_SESSION["email"]?></p>
-        <p>nickname:<?php echo $_SESSION["nick"]?></p>
+        <p>email:<?php echo $email?></p>
+        <p>nickname:<?php echo $nickname?></p>
         <h2>adres</h2>
         <form method="post" action="opdracht-sessions-deel3.php">
             <label>straat</label>
             <input type="text" name="street"
-            value="<?php echo $_SESSION["street"]?>">
+            value="<?php echo $street ?>">
             <label>nummer</label>
             <input type="text" name="number"
-            value="<?php echo $_SESSION["number"]?>">
+            value="<?php echo $number ?>">
              <label>gemeente</label>
             <input type="text" name="gemeente"
-            value="<?php echo $_SESSION["gemeente"]?>">
+            value="<?php echo $gemeente ?>">
              <label>postcode</label>
             <input type="text" name="postcode"
-            value="<?php echo $_SESSION["postcode"]?>">
+            value="<?php echo $postcode ?>">
             <br/>
             <input type="submit" name="submit" value="Volgende">
         </form>    
 
         <br/>
 
-        <P><a>Session destroy</a></P>
-
-        <code><?php var_dump($_SESSION) ?></code>   
+        <a href="opdracht-sessions-deel1.php?destroySession">Destroy session</a>  
     </body>
 </html>

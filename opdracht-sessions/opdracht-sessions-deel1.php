@@ -1,21 +1,17 @@
 <?php
 
-    session_start();
+ session_start();
 
-    if (isset($_POST["email"])) {
-        $_SESSION["email"] = $_POST["email"];
-    }
-    else {
-        $_SESSION["email"] = "";
-    }
-     if (isset($_POST["nick"])) {
-        $_SESSION["nick"] = $_POST["nick"];
-    }
-    else {
-        $_SESSION["nick"] = "";
+    if (isset($_GET["destroySession"]))
+    {
+            session_destroy();
+            header("location: opdracht-sessions-deel1.php");
     }
 
-    session_destroy();
+    var_dump($_SESSION);
+
+    $email = (isset($_SESSION["email"])) ? $_SESSION["email"] : '';
+    $nickname = (isset($_SESSION["nick"])) ? $_SESSION["nick"] : '';
 
 ?>
 <!doctype html>
@@ -31,18 +27,17 @@
         <br/>
         <h2>registratiegegevens</h2>
         <form method="post" action="opdracht-sessions-deel2.php">
-            <label>e-mail</label>
-            <input type="text" name="email"
-            value="<?php echo $_SESSION["email"]?>">
-            <label>nickname</label>
-            <input type="text" name="nick"
-            value="<?php echo $_SESSION["nick"]?>">
+            <label for="email">e-mail</label>
+            <input type="text" id="email" name="email"
+            value="<?= $email?>" <?php ($_GET["key"] == "email") ? "autofocus" : "" ?> >
+            <label for="nick">nickname</label>
+            <input type="text" id="nick" name="nick"
+            value="<?= $nickname ?>" <?php ($_GET["key"] == "nick") ? "autofocus" : "" ?> >
             <br/>
             <input type="submit" name="submit" value="Volgende">
         </form>    
 
         <br/>
 
-        <code><?php var_dump($_SESSION) ?></code>   
     </body>
 </html>

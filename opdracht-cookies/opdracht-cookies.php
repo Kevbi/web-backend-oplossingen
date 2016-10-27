@@ -24,7 +24,7 @@
 
     if (isset($_GET["logout"])) {
     
-            setcookie('authenticated',"", time() -3600);
+            setcookie('authenticated',FALSE);
             
             header('location: opdracht-cookies.php');
     }
@@ -56,10 +56,10 @@
 
         <?php if (!$isAuthenticated) :?>
         <form method="post">
-            <label>gebruikersnaam</label>
-            <input type="text" name="id">
-            <label>paswoord</label>
-            <input type="password" name="psw"> </br>
+            <label for="id">gebruikersnaam</label>
+            <input type="text" id="id" name="id">
+            <label for="psw">paswoord</label>
+            <input type="password" id="psw" name="psw"> </br>
             <input type="submit" name="submit" value="Submit">
         </form>
        <?php endif ?>
