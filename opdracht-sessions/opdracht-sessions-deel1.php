@@ -29,10 +29,10 @@
         <form method="post" action="opdracht-sessions-deel2.php">
             <label for="email">e-mail</label>
             <input type="text" id="email" name="email"
-            value="<?= $email?>" <?php ($_GET["key"] == "email") ? "autofocus" : "" ?> >
+            value="<?= $email?>" <?=(isset($_GET["key"]) && $_GET["key"] == "email") ? "autofocus" : '' ?> >
             <label for="nick">nickname</label>
             <input type="text" id="nick" name="nick"
-            value="<?= $nickname ?>" <?php ($_GET["key"] == "nick") ? "autofocus" : "" ?> >
+            value="<?= $nickname ?>" <?=(isset($_GET["key"]) && $_GET["key"] == "nick") ? "autofocus" : '' ?> >
             <br/>
             <input type="submit" name="submit" value="Volgende">
         </form>    

@@ -38,16 +38,16 @@
         <form method="post" action="opdracht-sessions-deel3.php">
             <label>straat</label>
             <input type="text" name="street"
-            value="<?php echo $street ?>">
+            value="<?php echo $street ?>" <?=(isset($_GET["key"]) && $_GET["key"] == "street") ? "autofocus" : '' ?>>
             <label>nummer</label>
             <input type="text" name="number"
-            value="<?php echo $number ?>">
+            value="<?php echo $number ?>" <?=(isset($_GET["key"]) && $_GET["key"] == "number") ? "autofocus" : '' ?> >
              <label>gemeente</label>
             <input type="text" name="gemeente"
-            value="<?php echo $gemeente ?>">
+            value="<?php echo $gemeente ?>" <?=(isset($_GET["key"]) && $_GET["key"] == "gemeente") ? "autofocus" : '' ?> >
              <label>postcode</label>
             <input type="text" name="postcode"
-            value="<?php echo $postcode ?>">
+            value="<?php echo $postcode ?>" <?=(isset($_GET["key"]) && $_GET["key"] == "postcode") ? "autofocus" : '' ?>>
             <br/>
             <input type="submit" name="submit" value="Volgende">
         </form>    

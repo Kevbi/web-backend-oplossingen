@@ -33,10 +33,10 @@
         <h2>gegevens</h2>
         <p>email : <?php echo $email ?> <a href="opdracht-sessions-deel1.php?key=email">Wijzig</a></p> 
         <p>nickname : <?php echo $nickname ?> <a href="opdracht-sessions-deel1.php?key=nick">Wijzig</a></p> 
-        <p>straat : <?php echo $street ?> <a href="opdracht-sessions-deel2.php?street">Wijzig</a></p> 
-        <p>nummer : <?php echo $number ?> <a href="opdracht-sessions-deel2.php?number">Wijzig</a></p> 
-        <p>gemeente : <?php echo $gemeente ?> <a href="opdracht-sessions-deel2.php?gemeente">Wijzig</a></p> 
-        <p>postcode : <?php echo $postcode ?> <a href="opdracht-sessions-deel2.php?postcode">Wijzig</a></p> 
+        <p>straat : <?php echo $street ?> <a href="opdracht-sessions-deel2.php?key=street">Wijzig</a></p> 
+        <p>nummer : <?php echo $number ?> <a href="opdracht-sessions-deel2.php?key=number">Wijzig</a></p> 
+        <p>gemeente : <?php echo $gemeente ?> <a href="opdracht-sessions-deel2.php?key=gemeente">Wijzig</a></p> 
+        <p>postcode : <?php echo $postcode ?> <a href="opdracht-sessions-deel2.php?key=postcode">Wijzig</a></p> 
         <br/>
 
            <a href="opdracht-sessions-deel1.php?destroySession">Destroy session</a>    
